@@ -122,9 +122,8 @@ export default function Home() {
       {/* Navigation */}
       <nav className="fixed top-0 z-50 w-full border-b border-primary/10 bg-background/70 backdrop-blur-xl">
         <div className="container flex items-center justify-between py-5">
-          <a href="#home" className="group flex items-center gap-3" onClick={closeMobileMenu}>
-            <img src="/images/logo.png" alt="Core & Patch Logo" className="h-10 w-10 object-contain transition-transform duration-300 group-hover:scale-110" />
-            <span className="hidden font-serif text-base font-bold tracking-[0.3em] text-foreground sm:block">CORE & PATCH</span>
+          <a href="#home" className="group flex items-center" onClick={closeMobileMenu}>
+            <img src="/brand/identity-v1.0/wordmark/corepatch-wordmark-dark.svg" alt="Core & Patch" className="brand-wordmark" />
           </a>
 
           <div className="hidden items-center gap-12 md:flex">
@@ -187,7 +186,7 @@ export default function Home() {
               className="max-w-5xl"
             >
               <span className="eyebrow">Exclusividade em Software</span>
-              <h1 className="mb-8 leading-tight">
+              <h1 className="mb-8">
                 A Arte de <br />
                 <span className="text-gradient-gold">Construir Soluções</span>
               </h1>
@@ -206,12 +205,6 @@ export default function Home() {
             </motion.div>
           </div>
           
-          {/* Art Deco Corner Elements */}
-          <div className="absolute bottom-0 right-0 hidden h-80 w-80 opacity-15 lg:block">
-            <div className="absolute bottom-0 right-0 h-full w-full border-r-2 border-b-2 border-primary" />
-            <div className="absolute bottom-6 right-6 h-full w-full border-r border-b border-primary/50" />
-            <div className="absolute bottom-12 right-12 h-full w-full border-r border-b border-primary/20" />
-          </div>
         </section>
 
         {/* Solutions Section */}
@@ -289,7 +282,7 @@ export default function Home() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: idx * 0.1 }}
                 >
-                  <span className="mb-6 block font-serif text-5xl font-light text-primary/25">{step.step}</span>
+                  <span className="mb-6 block text-5xl font-light text-primary/25">{step.step}</span>
                   <h3 className="mb-4 text-lg font-semibold">{step.title}</h3>
                   <p className="text-sm leading-relaxed text-muted-foreground">{step.description}</p>
                 </motion.div>
@@ -389,9 +382,9 @@ export default function Home() {
       <footer className="border-t border-primary/10 py-12">
         <div className="container">
           <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
-            <div className="flex items-center gap-3">
-              <img src="/images/logo.png" alt="Logo" className="h-8 w-8 object-contain" />
-              <span className="text-xs font-bold uppercase tracking-[0.3em] text-muted-foreground">© 2026 CORE & PATCH</span>
+            <div className="flex items-center gap-4">
+              <img src="/brand/identity-v1.0/wordmark/corepatch-wordmark-dark.svg" alt="Core & Patch" className="brand-wordmark w-36" />
+              <span className="text-xs font-medium uppercase tracking-[0.02em] text-muted-foreground">© 2026 Core & Patch</span>
             </div>
             
             <div className="flex gap-8">
