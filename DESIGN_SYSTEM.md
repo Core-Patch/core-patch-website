@@ -1,35 +1,17 @@
-# Core & Patch Design System (Art Déco Luxe)
+# Local implementation notes
 
-Este sistema de design foi gerado para o projeto Core & Patch, unindo a elegância geométrica do **Art Déco** com elementos modernos e interativos em **3D**.
+## Status
 
-## 1. Identidade Visual
-- **Estilo**: Art Déco Moderno / Luxe
-- **Conceito**: Sofisticação, Modernidade, Premium.
-- **Elementos Chave**: Geometria simétrica, metais polidos, profundidade 3D.
+The prior Art Déco Luxe system (gold/copper palette, Playfair Display, Inter, and decorative geometry) is **SUPERSEDED** for this institutional site.
 
-## 2. Paleta de Cores
-| Cor | Hex | Uso |
-| :--- | :--- | :--- |
-| **Preto Profundo** | `#0C0A09` | Fundo principal, superfícies de luxo. |
-| **Dourado Gatsby** | `#A16207` | Destaques, CTAs, bordas metálicas. |
-| **Cobre Polido** | `#B45309` | Detalhes secundários, gradientes. |
-| **Marfim Perolado** | `#FAFAF9` | Texto principal, contrastes suaves. |
-| **Cinza Metálico** | `#44403C` | Textos secundários, divisores. |
+The institutional authority is **Core & Patch Identity 2026 — V1.0** and the P03 Brand System. This repository does not duplicate those rules.
 
-## 3. Tipografia
-- **Display/Headings**: `Playfair Display` (Serifa Geométrica)
-  - *Mood*: Elegante, clássico, alto contraste.
-- **Corpo/UI**: `Inter` ou `Jost` (Sans-serif Limpa/Geométrica)
-  - *Mood*: Moderno, legível, funcional.
+## Repository bridge
 
-## 4. Elementos de Interface (UI)
-- **Botões**: Bordas douradas, gradientes metálicos sutis, brilho ao hover.
-- **Cards**: Bordas finas metálicas, sombras suaves (profundidade), fundo preto fosco.
-- **Geometria**: Uso de padrões de linhas (sunburst, chevron) em divisores e fundos.
-- **3D**: Integração de cenas Three.js na Hero e micro-interações 3D em ícones.
+- Identity assets live in `client/public/brand/identity-v1.0`.
+- Global tokens use the `--cp-` prefix in `client/src/index.css`.
+- The existing Tailwind 4, Radix/shadcn components, ThemeProvider, routing, and responsive behavior remain in use.
+- Legacy class names such as `.btn-gold` and `.art-deco-card` remain temporarily for component compatibility; their visual treatment is institutional and neutral.
+- The existing favicon remains unchanged. `FAVICON_FINAL_PENDING`.
 
-## 5. Diretrizes de UX
-- **Mobile-First**: Layout responsivo otimizado para todas as telas.
-- **Performance**: Animações 3D otimizadas (prefers-reduced-motion).
-- **Acessibilidade**: Contraste mínimo de 4.5:1 para textos.
-- **Micro-interações**: Transições suaves (200-400ms) para reforçar a sensação premium.
+For canonical brand decisions, use the released identity package and P03 documentation rather than this local note.
