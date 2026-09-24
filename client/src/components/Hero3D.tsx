@@ -29,13 +29,18 @@ function GeometricShape({ position, rotation, scale, color }: { position: [numbe
 }
 
 function ArtDecoBackground() {
-  const shapes = useMemo(() => {
+  const shapes = useMemo<Array<{
+    position: [number, number, number];
+    rotation: [number, number, number];
+    scale: number;
+    color: string;
+  }>>(() => {
     return [
       { position: [-4, 2, -5], rotation: [0.5, 0.5, 0], scale: 1.5, color: '#A16207' }, // Gold
       { position: [4, -2, -6], rotation: [0, 0.2, 0.5], scale: 2, color: '#B45309' },  // Copper
       { position: [-2, -3, -4], rotation: [0.8, 0, 0.2], scale: 1, color: '#A16207' }, // Gold
       { position: [5, 3, -7], rotation: [0.2, 0.8, 0], scale: 1.2, color: '#44403C' },  // Metallic Grey
-    ] as const;
+    ];
   }, []);
 
   return (

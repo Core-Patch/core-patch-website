@@ -65,7 +65,13 @@ function CopperAccent({ position, rotation, scale, delay }: { position: [number,
 }
 
 function ArtDecoScene() {
-  const shapes = useMemo(() => {
+  const shapes = useMemo<Array<{
+    position: [number, number, number];
+    rotation: [number, number, number];
+    scale: number;
+    delay: number;
+    type: 'gold' | 'copper';
+  }>>(() => {
     return [
       // Gold primary shapes
       { position: [-5, 3, -8], rotation: [0.5, 0.5, 0], scale: 1.8, delay: 0, type: 'gold' },
@@ -76,7 +82,7 @@ function ArtDecoScene() {
       { position: [7, 4, -9], rotation: [0.2, 0.8, 0], scale: 1.5, delay: 0.3, type: 'copper' },
       { position: [-6, 2, -6], rotation: [0.4, 0.1, 0.6], scale: 1.2, delay: 0.7, type: 'copper' },
       { position: [4, -3, -8], rotation: [0.6, 0.4, 0.1], scale: 1.4, delay: 1.2, type: 'copper' },
-    ] as const;
+    ];
   }, []);
 
   return (
@@ -103,7 +109,7 @@ function ArtDecoScene() {
       )}
       
       {/* High-quality environment */}
-      <Environment preset="studio" intensity={0.8} />
+      <Environment preset="studio" />
       <Preload all />
     </>
   );
